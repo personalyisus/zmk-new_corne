@@ -13,6 +13,12 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
+&lt {
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
+};
+
+
 / {
     behaviors {
         td0: td0 {
@@ -44,11 +50,6 @@
         };
 
 
-    };
-
-    &lt {
-        tapping-term-ms = <150>;
-        quick-tap-ms = <150>;
     };
 
     rgb_encoder: rgb_encoder {
