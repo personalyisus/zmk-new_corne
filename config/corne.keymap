@@ -56,7 +56,9 @@
         default_layer {
             display-name = "QWERTY";
 
+            // Yisusnotes:
             // take into consideration that the first column of the right side is mapped to the analog stick
+            // also the first element of the last left side row is mapped to the knob click
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |                ↑    |  Y  |  U   |  I  |  O  |  P  | BKSP |      &kp UP_ARROW 
             // | SHIFT |  A  |  S  |  D  |  F  |  G  |               ↓    |  H  |  J   |  K  |  L  |  ;  |  '   | 
@@ -68,7 +70,7 @@
 &none      &kp Q  &kp W      &kp E     &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp SQT   &none
 &none      &mt LCTRL A  &mt LALT S     &mt LGUI D &mt LSHFT F  &kp G          &kp DOWN_ARROW   &kp H        &mt RSHFT J  &mt RGUI K      &mt RALT L    &mt RCTRL P     &none
 &none      &kp Z  &kp X      &kp C     &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                  &kp ESC    &lt 2 SPACE  &kp TAB &kp SPACE  &kp RIGHT_ARROW  &kp ENTER    &lt 1 BSPC  &kp DEL
+                  &kp SPACE  &kp ESC   &lt 2 SPACE  &kp TAB  &kp RIGHT_ARROW  &kp ENTER    &lt 1 BSPC  &kp DEL
                                                              &kp ENTER
             >;
 
