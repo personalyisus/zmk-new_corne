@@ -1,6 +1,6 @@
-layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layout: {zmk_keyboard: corne}
 layers:
-  default:
+  QWERTY:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Q
   - W
@@ -42,14 +42,14 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:keyboard-space$$', h: raise}
+  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - $$mdi:keyboard-tab$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', h: lower}
+  - {t: '$$mdi:backspace$$', h: NUMBER}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  lower:
+  NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
   - {t: '7', s: '&'}
@@ -90,7 +90,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+ .
+  - Sft+.
   - {t: '0', s: )}
   - {t: '-', s: _}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -98,8 +98,8 @@ layers:
   - {type: held}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:mouse-left-click-outline$$
-  raise:
-  - {t: Gui+Ctl+Sft+ 4, s: Gui+Ctl+Sft+ $}
+  SYMBOL:
+  - {t: Gui+Ctl+Sft+4, s: Gui+Ctl+Sft+$}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -147,7 +147,7 @@ layers:
   - RGB EFF
   - RGB EFR
   - $$mdi:mouse-left-click-outline$$
-  '3':
+  FN:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2

@@ -156,8 +156,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -171,12 +171,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -284,8 +292,8 @@ rect.held, rect.combo.held {
   visibility: hidden;
 }
 </style>
-<g transform="translate(40, 0)" class="layer-default">
-<text x="0" y="28" class="label" id="default">default:</text>
+<g transform="translate(40, 0)" class="layer-QWERTY">
+<text x="0" y="28" class="label" id="QWERTY">QWERTY:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 77)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
@@ -508,8 +516,8 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-space"/>
-<a href="#raise">
-<text x="0" y="24" class="key hold layer-activator">raise</text>
+<a href="#SYMBOL">
+<text x="0" y="24" class="key hold layer-activator">SYMBOL</text>
 </a></g>
 <g transform="translate(382, 299) rotate(30.0)" class="key keypos-42">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key side"/>
@@ -530,8 +538,8 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:backspace"/>
-<a href="#lower">
-<text x="0" y="24" class="key hold layer-activator">lower</text>
+<a href="#NUMBER">
+<text x="0" y="24" class="key hold layer-activator">NUMBER</text>
 </a></g>
 <g transform="translate(672, 252)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -545,8 +553,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 405)" class="layer-lower">
-<text x="0" y="28" class="label" id="lower">lower:</text>
+<g transform="translate(40, 405)" class="layer-NUMBER">
+<text x="0" y="28" class="label" id="NUMBER">NUMBER:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 77)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -716,9 +724,8 @@ rect.held, rect.combo.held {
 <g transform="translate(252, 168)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#x_x">
-<text x="0" y="-4" class="key tap layer-activator">3</text>
-</a><text x="0" y="-24" class="key shifted">#</text>
+<text x="0" y="-4" class="key tap">3</text>
+<text x="0" y="-24" class="key shifted">#</text>
 </g>
 <g transform="translate(308, 182)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -770,9 +777,7 @@ rect.held, rect.combo.held {
 <g transform="translate(252, 252)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">Sft+</tspan><tspan x="0" dy="1.2em">.</tspan>
-</text>
+<text x="0" y="-4" class="key tap">Sft+.</text>
 </g>
 <g transform="translate(314, 276) rotate(30.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -813,14 +818,14 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 811)" class="layer-raise">
-<text x="0" y="28" class="label" id="raise">raise:</text>
+<g transform="translate(40, 811)" class="layer-SYMBOL">
+<text x="0" y="28" class="label" id="SYMBOL">SYMBOL:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 77)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.0em" style="font-size: 60%">Gui+Ctl+S…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">4</tspan>
+<tspan x="0" dy="-1.2em">Gui+</tspan><tspan x="0" dy="1.2em">Ctl+</tspan><tspan x="0" dy="1.2em">Sft+4</tspan>
 </text>
 <text x="0" y="-24" class="key shifted"><tspan style="font-size: 60%">Gui+Ctl+S…</tspan></text>
 </g>
@@ -870,9 +875,8 @@ rect.held, rect.combo.held {
 <g transform="translate(728, 49)" class="key keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#x_x">
-<text x="0" y="24" class="key hold layer-activator">3</text>
-</a><use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="24" class="key hold">3</text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
 </g>
 <g transform="translate(784, 56)" class="key keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1086,8 +1090,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1216)" class="layer-3">
-<text x="0" y="28" class="label" id="x_x">3:</text>
+<g transform="translate(40, 1216)" class="layer-FN">
+<text x="0" y="28" class="label" id="FN">FN:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 77)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
